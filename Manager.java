@@ -1,0 +1,17 @@
+public class Manager extends Employee {
+    private int teamSize;
+
+    public Manager(int id, String name, double salary,String department,int teamSize) {
+        super(id,name,salary,department);
+        this.teamSize = teamSize;
+    }
+    public double calculateBonus() {
+        return salary*0.20;
+    }
+
+    @Override
+    public void showInfo() {
+        super.showInfo();
+        System.out.println("Team Size: " + teamSize);
+    }
+}
